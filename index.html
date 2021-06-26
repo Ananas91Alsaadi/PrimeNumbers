@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="number">
+	<button onClick="doIt()">do</button>
+	<div>
+	<ol></ol></div>
+	
+	
+	<script>
+	var testIn = [2,3,4,5,6,7,8,9];
+		var correct=0;
+		var num=2;
+		function doIt() {
+			var howMany =		document.querySelector("input").value;
+
+		while ( correct < howMany) {
+			for (let i in testIn) {
+				if (((num/testIn[i])%1)==0 && num!=testIn[i]) {
+					num++;
+										console.log("no" + num);
+
+					break;	
+					} else if (i==testIn.length-1){
+										console.log("Yes"+ num);
+
+						correct++;
+
+						var corr = document.createElement("li");	
+						var textnode = document.createTextNode(num);
+						corr.appendChild(textnode); 
+						document.querySelector("ol").appendChild(corr);
+																	num++;
+
+							   }
+			}
+			
+			
+		}
+	}
+	</script>
+</body>
+</html>
