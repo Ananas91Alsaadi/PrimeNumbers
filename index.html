@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+	<style>
+		ol{
+						margin: 20px;
+									font-size: 10px;
+
+		}
+		
+		span{
+						font-size: 20px;
+margin:10px
+		}
+	</style>
 </head>
 
 <body>
@@ -31,9 +43,13 @@
 
 						correct++;
 
-						var corr = document.createElement("li");	
+						var corr = document.createElement("li");
+						var corrSpan = document.createElement("span");	
+
 						var textnode = document.createTextNode(num);
-						corr.appendChild(textnode); 
+						corrSpan.appendChild(textnode); 
+						corr.appendChild(corrSpan);
+
 						document.querySelector("ol").appendChild(corr);
 																	num++;
 
